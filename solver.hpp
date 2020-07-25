@@ -37,7 +37,10 @@ class RealVariable {
         double getC(){return _c;}
 
         //We want make it friend in order to enable something like 7 * RealVariable
-        RealVariable operator+(const RealVariable &, const RealVariable &);
+        
+    };
+    
+    RealVariable operator+(const RealVariable &, const RealVariable &);
 
         RealVariable operator+(const RealVariable &, const double);
 
@@ -56,7 +59,6 @@ class RealVariable {
         RealVariable operator==(const RealVariable &, const RealVariable &);
 
         RealVariable operator==(const RealVariable &, const double);
-    };
 
     class ComplexVariable  {
 
@@ -78,7 +80,9 @@ class RealVariable {
         complex<double> solve_formula();
 
 
-        ComplexVariable operator+(const ComplexVariable &, const ComplexVariable &);
+        
+    };
+    ComplexVariable operator+(const ComplexVariable &, const ComplexVariable &);
 
         ComplexVariable operator+(const ComplexVariable &, const double);
 
@@ -99,7 +103,6 @@ class RealVariable {
          ComplexVariable operator==(const ComplexVariable &, const double);
 
          ComplexVariable operator==(const ComplexVariable &, const ComplexVariable &);
-    };
 
 }
 
