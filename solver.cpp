@@ -56,7 +56,7 @@ double solve(RealVariable r)
     }
 
     RealVariable operator+(const double num, const RealVariable &r) {
-        return r + num; // :)
+        return r + num; 
     }
 
     RealVariable operator-(const RealVariable &r1, const RealVariable &r2) {
