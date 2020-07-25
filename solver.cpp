@@ -194,19 +194,7 @@ complex<double> ComplexVariable::solve_formula()
 }
 
 
-// int main()
-// {
-//     // cout<<"test"<<endl;
-//     // solver::RealVariable x;
-//     // double ans = solver::solve(x+2+x+2 == 10);
-//     // cout << x.getC() <<endl;
-//     // cout << ans <<endl;
 
-//   solver::ComplexVariable y;
-//   complex<double> ans = solver::solve(y+5i == y + y+3i).imag();
-
-//     return 0;
-// }
 
 
 
