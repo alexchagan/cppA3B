@@ -36,7 +36,7 @@ class RealVariable {
         double getB(){return _b;}
         double getC(){return _c;}
 
-        //We want make it friend in order to enable something like 7 * RealVariable
+        
         
     };
     
@@ -74,8 +74,7 @@ class RealVariable {
         
         ComplexVariable(double a, double b, double c, complex<double> im):_a(a),_b(b),_c(c),_im(im){};
 
-        //void handle_imag(complex<double> &result, double a, double b, double discriminant) override;
-        //complex<double> solve(ComplexVariable);
+        
         
         complex<double> solve_formula();
 
