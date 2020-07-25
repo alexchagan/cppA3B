@@ -29,9 +29,6 @@ class RealVariable {
         
         RealVariable(double a, double b, double c):_a(a),_b(b),_c(c){};
 
-        //void handle_imag(complex<double> &result, double a, double b, double discriminant);
-       
-        //double solve(RealVariable r);
 
         double solve_formula();
 
