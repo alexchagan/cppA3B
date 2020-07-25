@@ -16,14 +16,14 @@ namespace solver{
 
 class RealVariable {
        
-        protected:
+        public:
         
         double _a;//Coefficient of x^2
         double _b;//Coefficient of x
         double _c;//Free number
 
         
-        public:
+      
 
         RealVariable() : _a(0.0), _b(1.0), _c(0.0){}//Default C'tor
         
@@ -62,13 +62,13 @@ class RealVariable {
 
     class ComplexVariable  {
 
-    protected:  
+    public:  
         double _a;//Coefficient of x^2
         double _b;//Coefficient of x
         double _c;//Free number
         complex<double> _im;
   
-    public:
+   
 
         ComplexVariable() : _a(0.0), _b(1.0), _c(0.0), _im(0.0){}//Default C'tor
         
