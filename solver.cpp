@@ -14,7 +14,7 @@ double RealVariable::solve_formula()
 {
         double a(_a), b(_b), c(_c);
         double discriminant = b * b - 4 * a * c;
-        //complex<double> result(0.0, 0);
+       
         double result = 0.0;
 
         if (a == 0.0 && b == 0.0) {
@@ -28,14 +28,13 @@ double RealVariable::solve_formula()
             } 
             else 
             {
-                //handle_imag(result, a, b, discriminant);
+               
                 throw exception(invalid_argument("There is no solution"));
             }
         } 
         else 
         {
-            // result.real(-c / b); //The only solution we have
-            // result.imag(_im.imag());
+            
             result = -c/b;
         }
 
