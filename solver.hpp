@@ -36,11 +36,7 @@ class RealVariable {
         double getB(){return _b;}
         double getC(){return _c;}
 
-        
-        
-    };
-    
-    friend RealVariable operator+(const RealVariable &, const RealVariable &);
+         friend RealVariable operator+(const RealVariable &, const RealVariable &);
 
         friend RealVariable operator+(const RealVariable &, const double);
 
@@ -59,6 +55,10 @@ class RealVariable {
         friend RealVariable operator==(const RealVariable &, const RealVariable &);
 
         friend RealVariable operator==(const RealVariable &, const double);
+        
+    };
+    
+   
 
     class ComplexVariable  {
 
@@ -79,9 +79,7 @@ class RealVariable {
         complex<double> solve_formula();
 
 
-        
-    };
-    friend ComplexVariable operator+(const ComplexVariable &, const ComplexVariable &);
+        friend ComplexVariable operator+(const ComplexVariable &, const ComplexVariable &);
 
         friend ComplexVariable operator+(const ComplexVariable &, const double);
 
@@ -102,6 +100,8 @@ class RealVariable {
        friend ComplexVariable operator==(const ComplexVariable &, const double);
 
         friend ComplexVariable operator==(const ComplexVariable &, const ComplexVariable &);
+    };
+    
 
 }
 
