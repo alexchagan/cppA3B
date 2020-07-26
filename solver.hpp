@@ -16,14 +16,14 @@ namespace solver{
 
 class RealVariable {
        
-        public:
+        protected:
         
         double _a;//Coefficient of x^2
         double _b;//Coefficient of x
         double _c;//Free number
 
         
-      
+      public:
 
         RealVariable() : _a(0.0), _b(1.0), _c(0.0){}//Default C'tor
         
@@ -40,35 +40,35 @@ class RealVariable {
         
     };
     
-    RealVariable operator+(const RealVariable &, const RealVariable &);
+    friend RealVariable operator+(const RealVariable &, const RealVariable &);
 
-        RealVariable operator+(const RealVariable &, const double);
+        friend RealVariable operator+(const RealVariable &, const double);
 
-        RealVariable operator+(const double, const RealVariable &);
+        friend RealVariable operator+(const double, const RealVariable &);
 
-        RealVariable operator-(const RealVariable &, const RealVariable &);
+        friend RealVariable operator-(const RealVariable &, const RealVariable &);
 
-        RealVariable operator-(const RealVariable &, const double);
+        friend RealVariable operator-(const RealVariable &, const double);
 
-        RealVariable operator*(const double, const RealVariable &);
+        friend RealVariable operator*(const double, const RealVariable &);
 
-        RealVariable operator/(const RealVariable &, const double);
+        friend RealVariable operator/(const RealVariable &, const double);
 
-        RealVariable operator^(RealVariable const &, const double);
+        friend RealVariable operator^(RealVariable const &, const double);
 
-        RealVariable operator==(const RealVariable &, const RealVariable &);
+        friend RealVariable operator==(const RealVariable &, const RealVariable &);
 
-        RealVariable operator==(const RealVariable &, const double);
+        friend RealVariable operator==(const RealVariable &, const double);
 
     class ComplexVariable  {
 
-    public:  
+    protected:  
         double _a;//Coefficient of x^2
         double _b;//Coefficient of x
         double _c;//Free number
         complex<double> _im;
   
-   
+   public:
 
         ComplexVariable() : _a(0.0), _b(1.0), _c(0.0), _im(0.0){}//Default C'tor
         
@@ -81,27 +81,27 @@ class RealVariable {
 
         
     };
-    ComplexVariable operator+(const ComplexVariable &, const ComplexVariable &);
+    friend ComplexVariable operator+(const ComplexVariable &, const ComplexVariable &);
 
-        ComplexVariable operator+(const ComplexVariable &, const double);
+        friend ComplexVariable operator+(const ComplexVariable &, const double);
 
-        ComplexVariable operator+(const double, const ComplexVariable &);
+       friend ComplexVariable operator+(const double, const ComplexVariable &);
 
-        ComplexVariable operator+(const ComplexVariable &, complex<double>);
+      friend ComplexVariable operator+(const ComplexVariable &, complex<double>);
 
-        ComplexVariable operator-(const ComplexVariable &, const ComplexVariable &);
+     friend ComplexVariable operator-(const ComplexVariable &, const ComplexVariable &);
 
-        ComplexVariable operator-(const ComplexVariable &, const double);
+     friend ComplexVariable operator-(const ComplexVariable &, const double);
 
-         ComplexVariable operator*(const double, ComplexVariable const &);
+      friend ComplexVariable operator*(const double, ComplexVariable const &);
 
-         ComplexVariable operator/(ComplexVariable const &, const double);
+       friend ComplexVariable operator/(ComplexVariable const &, const double);
 
-         ComplexVariable operator^(ComplexVariable const &, const double);
+       friend ComplexVariable operator^(ComplexVariable const &, const double);
 
-         ComplexVariable operator==(const ComplexVariable &, const double);
+       friend ComplexVariable operator==(const ComplexVariable &, const double);
 
-         ComplexVariable operator==(const ComplexVariable &, const ComplexVariable &);
+        friend ComplexVariable operator==(const ComplexVariable &, const ComplexVariable &);
 
 }
 
